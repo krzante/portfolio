@@ -46,10 +46,6 @@ body {
     font-family: var(--font-base), sans-serif;
 }
 
-section {
-    height: 100vh;
-}
-
 .color-1 {
     color: var(--color-palette-1);
 }
@@ -86,15 +82,14 @@ section {
 }
 
 #landing-page-buttons {
-    animation: 1.5s ease-out 0s 1 slideInBottom;
+    animation: 1.1s ease-out 0s 1 slideInLeft;
 }
 
-.project-section {
-    height: 300vh;
+.about-section p {
+    font-size: 1.25rem;
 }
 
 .skill-section {
-    height: 70vh;
     text-align: center;
 }
 
@@ -103,10 +98,12 @@ section {
 }
 
 .contact-section {
-    height: 30vh;
+    position: static;
+    margin-top: 10rem;
 }
 
 .contact-box {
+    position: absolute;
     height: 30vh;
     background-color: var(--color-palette-3);
     border-top-left-radius: 2rem;
@@ -125,7 +122,6 @@ section {
     transition: 0.5s;
     transform: translateY(-0.5rem);
     color: var(--color-palette-2)
-    /* background-color: transparent !important; */
 }
 
 .icon-links-container a i:not(:hover){
@@ -185,4 +181,23 @@ section {
 
 .btn:not(:hover) {
     transition: 0.5s;
+}
+
+
+.hidden {
+    transition: 0.5s;
+    opacity: 0%;
+    transform: translateX(-50%);
+}
+
+.hidden-below {
+    transition: 0.5s;
+    opacity: 0%;
+    transform: translateY(50%);
+}
+
+.show{
+    opacity: 100%;
+    transform: translateY(0);
+    transform: translateX(0);
 }
