@@ -8,25 +8,24 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/style.css">
     
     <title>Zante | Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/icon.png">
 </head>
 <body>
   <section class="home-section">
     <div class="container-fluid">
       <div class="row intro-row offset-1 justify-content-start align-items-center">
-        <div class="col-sm-8">
-          <div id="landing-page-text">
+        <div class="col-sm-10">
+          <div class="hidden" id="landing-page-text">
             <h1>Hi, I am</h1>
             <h1 class="intro-h1 color-2">Kyle Ramon Zante.</h1>
             <h2 class="intro-h2">Web | Game | Software Developer</h2>
           </div>
           
-          <div id="landing-page-buttons">
+          <div class="hidden" id="landing-page-buttons">
             <button type="button" class="btn" onclick="smoothScroll(document.getElementById('about-section'))">About</button>
             <button type="button" class="btn" onclick="smoothScroll(document.getElementById('project-section'))">Projects</button>
             <button type="button" class="btn" onclick="smoothScroll(document.getElementById('skill-section'))">Skills </button>
@@ -48,9 +47,9 @@
       <div class="row justify-content-center align-items-center">
         <div class="col-sm-12 about-box">
           <div class="about-content">
-            <h1 class="color-1">ABOUT</h1>
-            <h3 class="color-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet nisl quis nunc placerat fringilla. Fusce ac feugiat nunc, sollicitudin ultrices nisi. Fusce sed nunc metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum ligula elit, volutpat ac scelerisque vehicula, condimentum in ligula.</h3>
-            <a href="./assets/files/zante_resume.pdf" class="btn" target="_blank">Resume</a>
+            <h1 class="color-1 hidden">ABOUT</h1>
+            <p class="color-1 hidden">As someone who enjoys bringing characters to life through cosplaying, I have developed a strong attention to detail. This attention to detail carries over into my coding practices, where I meticulously optimize and refine every line of code. Just as cosplaying allows me to immerse myself in my favorite characters' worlds, coding allows me to create immersive digital experiences that leave a lasting impact.</p>
+            <a href="./assets/files/zante_resume.pdf" class="btn hidden" target="_blank">Resume</a>
           </div>
         </div>
       </div>
@@ -62,11 +61,11 @@
     <div class="container-fluid">
       <div class="row justify-content-center align-items-center">
         <div class="col-sm-10 justify-content-center">
-            <h1 class="color-3 text-center mt-4">PROJECTS</h1>
+            <h1 class="color-3 text-center mt-4 hidden-below">PROJECTS</h1>
         </div>
       </div>
 
-      <div class="row my-5 justify-content-center">
+      <div class="row my-5 justify-content-center hidden">
         <div class="col-sm-5 justify-content-start">
             <h3 class="color-3 text-start ">Enter Zabali</h3>
 
@@ -75,7 +74,7 @@
               <button class="btn-disabled" disabled>GDScript</button>
             </div>
             
-            <p class="color-3 text-start ">Rouge-like action role-playing game made using the Godot game engine. Enter Zabali is a game where you can control 1 of the 4 playable characters; A knight, thief, mage or a civilian. Your goal is to defeat the final boss found within the deepest floor in the Zabali dungeon.</p>
+            <p class="color-3 text-start ">Rogue-like action role-playing game made using the Godot game engine. Enter Zabali is a game where you can control 1 of the 4 playable characters; A knight, thief, mage or a civilian. Your goal is to defeat the final boss found within the deepest floor in the Zabali dungeon.</p>
             <a class="btn btn-success" href="https://armonykle.itch.io/enter-zabali" target="_blank">Demo</a>
           </div>
 
@@ -84,11 +83,7 @@
         </div>
       </div>
 
-      <div class="row my-5 justify-content-center">
-        <div class="col-sm-5 justify-content-center align-items-center">
-          <img src="./assets/images/ideanaleh.png" class="img-fluid rounded" alt="">
-        </div>
-
+      <div class="row my-5 justify-content-center hidden">
         <div class="col-sm-5 justify-content-start">
           <h3 class="color-3 text-start ">Ideanaleh</h3>
 
@@ -105,10 +100,15 @@
 
           <p class="color-3 text-start ">A php web application with the laravel framework. Ideanaleh is a reward-based crowdfunding based for the Philippine market. Users can post their projects and receive funding from backers. This was our red-lit thesis project due to its monetary components.</p>
           <a class="btn btn-success" href="https://github.com/0IUwUL/Ideanaleh" target="_blank">Source Code</a>
+        
+        
+        </div>
+        <div class="col-sm-5 justify-content-center align-items-center">
+          <img src="./assets/images/ideanaleh.png" class="img-fluid rounded" alt="">
         </div>
       </div>
 
-      <div class="row my-5 justify-content-center">
+      <div class="row my-5 justify-content-center hidden">
         <div class="col-sm-5 justify-content-start">
             <h3 class="color-3 text-start ">Tarheta</h3>
 
@@ -128,11 +128,7 @@
         </div>
       </div>
 
-      <div class="row my-5 justify-content-center">
-        <div class="col-sm-5 justify-content-center align-items-center">
-          <img src="./assets/images/axie_calculator.gif" class="img-fluid rounded" alt="">
-        </div>
-
+      <div class="row my-5 justify-content-center hidden">
         <div class="col-sm-5 justify-content-start">
           <h3 class="color-3 text-start ">Axie Calculator App</h3>
 
@@ -146,9 +142,13 @@
           <a class="btn btn-success" href="https://armonykle.itch.io/axie-calculator" target="_blank">Demo</a>
           <a class="btn btn-success" href="https://github.com/krzante/axie-energy-calculator-overlay" target="_blank">Source Code</a>
         </div>
+
+        <div class="col-sm-5 justify-content-center align-items-center">
+          <img src="./assets/images/axie_calculator.gif" class="img-fluid rounded" alt="">
+        </div>
       </div>
 
-      <div class="row my-5 justify-content-center">
+      <div class="row my-5 justify-content-center hidden">
         <div class="col-sm-5 justify-content-start">
             <h3 class="color-3 text-start ">Into the Battlefield</h3>
 
@@ -173,13 +173,13 @@
   <section class="skill-section" id="skill-section">
     <div class="container-fluid">
 
-      <div class="row justify-content-center">
+      <div class="row justify-content-center hidden-below">
         <div class="col-sm-10 justify-content-center">
             <h1 class="color-3 text-center my-3">SKILLS</h1>
         </div>
       </div>
 
-      <div class="row justify-content-center">
+      <div class="row justify-content-center hidden-below">
         <div class="col-sm-3 ">
           <h4>LANGUAGES</h4>
           <div class="technologies-container">
@@ -199,9 +199,9 @@
         </div>
         <div class="col-sm-3">
           <h4>TOOLS</h4>
-          <div class="technologies-container">
+          <div class="technologies-container ">
             <button class="btn-disabled" disabled>VSCode</button>
-            <button class="btn-disabled" disabled>Visual Studio Code</button>
+            <button class="btn-disabled" disabled>Visual Studio</button>
             <button class="btn-disabled" disabled>Android Studio</button>
             <button class="btn-disabled" disabled>XAMPP</button>
             <button class="btn-disabled" disabled>PHPMyAdmin</button>
@@ -211,7 +211,7 @@
           </div>
         </div>
         <div class="col-sm-3">
-          <h4>FRAMEWORKS/ENGINES</h4>
+          <h4>FRAMEWORKS</h4>
           <div class="technologies-container">
             <button class="btn-disabled" disabled>Laravel 9</button>
             <button class="btn-disabled" disabled>CodeIgniter 3</button>
@@ -223,17 +223,14 @@
     </div>
   </section>
 
-  <section class="contact-section" id="contact-section">
+  <section class="contact-section " id="contact-section">
     <div class="container-fluid ">
       <div class="row justify-content-center align-items-center">
-        <div class="col-sm-10 justify-content-center contact-box align-items-center">
-            <h1 class="color-1 text-center mt-3">CONTACT</h1>
-            <h5 class="color-1 text-center ">kyleramon.zante@gmail.com</h5>
-            <!-- <h1 class="color-1 text-center mt-3"><a href="https://google.com" target="_blank"><i class="fa-brands fa-itch-io fa-2xl"></i></a></h1> -->
-
-            
+        <div class="col-sm-10 justify-content-center contact-box align-items-center hidden-below">
+            <h1 class="color-1 text-center mt-3 hidden-below">CONTACT</h1>
+            <h5 class="color-1 text-center hidden-below">kyleramon.zante@gmail.com</h5>
   
-            <div class="icon-links-container text-center mt-3 mx-4">
+            <div class="icon-links-container text-center mt-3 mx-4 hidden-below">
               <a href="./assets/files/zante_resume.pdf" target="_blank"><i class="fa-solid fa-folder fa-3x"></i></i></a>
               <a href="https://www.linkedin.com/in/kyle-ramon-zante/" target="_blank"><i class="fa-brands fa-linkedin fa-3x"></i></i></a>
               <a href="https://github.com/krzante" target="_blank"><i class="fa-brands fa-square-github fa-3x"></i></a>
@@ -249,6 +246,6 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="./assets/js/main.js"></script>
+  <script defer type="text/javascript" src="./assets/js/main.js"></script>
 </body> 
 </html>
