@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .then((response) => response.json())
         .then((data) => {
             // Loop through the projects array
-            data.forEach((project) => {
+            data.projects.forEach((project) => {
                 // Create a project card element
                 const projectCard = document.createElement("div");
                 projectCard.classList.add("row", "my-5", "justify-content-center", "hidden"); //
